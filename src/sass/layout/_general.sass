@@ -10,8 +10,8 @@ a
 
 ul
   list-style: none
-  li
-    display: inline-block
+  // li
+  //   display: inline-block
 
 h1,
 h2,
@@ -21,9 +21,9 @@ p
   margin: 0
 
 body, html
-  background: white
+  background: #fff
   color: $fontColor
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Circular Air Book', sans-serif;
   font-size: 16px
   min-width: 320px
   max-width: 100%
@@ -31,6 +31,7 @@ body, html
   overflow-x: hidden
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  // height: 6000px
   &.is-fixed
     overflow: hidden !important
 
@@ -47,39 +48,17 @@ body, html
     // padding-top: 100px
 
 .container
-  max-width: 1200px
+  max-width: 1280px
   width: 100%
   margin-left: auto
   margin-right: auto
   padding-left: 40px
   padding-right: 40px
-  outline: 1px solid red
 
 +r($tablet)
   .container
     padding-left: 20px
     padding-right: 20px
-
-h2
-  font-family: $prata
-  font-size: 80px
-  color: $fontColor
-  line-height: 1.2
-  width: 100%
-  text-align: center
-  font-weight: 300
-
-+r($wide)
-  h2
-    font-size: 65px
-
-+r($desktop)
-  h2
-    font-size: 40px
-
-+r($tablet)
-  h2
-    font-size: 30px
 
 input
   -moz-appearance: none
@@ -88,26 +67,17 @@ input
 .page
   overflow: hidden
 
-// REMOVE FOR PRODUCTION !
-.dev-bp-debug
-  background: black
-  position: fixed
-  top: 0
-  right: 0
-  z-index: 9999
-  color: white
-  padding: 5px
-  font-size: 12px
-  border-bottom-left-radius: 5px
-
-
-.js-transition-overlay
-  position: fixed
-  top: 0
-  left: -100%
-  bottom: 0
-  z-index: 7
-  background: #252525
-  width: 100vw
-  will-change: transform
-  backface-visibility: hidden
+.btn
+  display: inline-block
+  line-height: 1
+  font-size: 20px
+  font-family: $black
+  text-align: center
+  color: #fff
+  border: 2px solid #fff
+  border-radius: 5px
+  padding: 18px 29px
+  transition: all $transitionSpeed $ease
+  &:hover
+    background: #fff
+    color: #1F3858

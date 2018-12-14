@@ -1,0 +1,83 @@
+.cardiology
+  padding: 95px 0 90px
+  background: url(../img/bg-cardiology.jpg) center center no-repeat
+  background-size: cover
+  .container
+    max-width: 1280px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+  &__profs
+    min-width: 300px
+    padding-top: 11px
+    display: flex
+    flex-direction: column
+    ul
+      padding: 0
+      margin: 0
+      li
+        display: flex
+        align-items: center
+        min-height: 27px
+        margin-bottom: 9px
+  &__title
+    font-size: 36px
+    font-family: $black
+    color: #fff
+    padding-left: 20px
+  &__content
+    width: calc(100% - 346px)
+    margin-left: auto
+  &__body
+    display: flex
+    font-size: 0
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+  &__info
+    width: 47%
+    padding: 0 0 0 20px
+    font-size: 20px
+    font-family: $book
+    color: #D2B57F
+    margin-top: 50px
+    line-height: 1.2
+    margin-bottom: 5px
+
+  &__item
+    width: auto
+    max-width: 100%
+    display: inline-block
+    transition: all $transitionSpeed $ease
+    font-size: 14px
+    // min-height: 25px
+    color: #fff
+    opacity: 0.7
+    position: relative
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 10px
+      height: 10px
+      background: url(../img/triangle.svg) center center no-repeat
+      background-size: contain
+      left: -28px
+      top: 50%
+      transform: translateY(-50%)
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    &:hover
+      opacity: 1
+    &.is-active
+      font-size: 20px
+      opacity: 1
+      padding-left: 2px
+      &:before
+        opacity: 1
+        left: -13px
+  &__tab
+    display: none
+    &:first-child
+      display: block

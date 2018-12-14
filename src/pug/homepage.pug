@@ -5,17 +5,229 @@ extends shared/_layout
 block content
 
   // BEGIN SECTION :: firstscreen
-  section
-    .firstscreen
-      .firstscreen__info
-        h1(data-aos='fade-up') SEI-Healthcare
+  section.firstscreen
+    .container
+      img(src="img/logotype.svg", alt="" data-aos='fade-up')
+      h1(data-aos='fade-up') SEI-Healthcare
+      h2(data-aos='fade-up') “Excellence In All We Do”
+      .firstscreen__line(data-aos='fade-up')
+      .firstscreen__list(data-aos='fade-up')
+        p Asia
+          span |
+          | Europe
+          span |
+          | USA
+          span |
+          | Canada
+          span |
+          | LATAM
+      .firscreen__button-container(data-aos='fade-up')
+        a.firstscreen__button.btn(href="#") Find out more
   
   // END SECTION :: firstscreen
 
   // BEGIN SECTION :: mission
   section.mission
     .container
-      p.mission__title Our Mission
-      p.mission__info Our mission is to organise the world’s medical information and make it universally accessible and useful to Doctors through technological innovation.
+      p.mission__title(data-aos="fade-up") Our Mission
+      p.mission__info(data-aos="fade-up") Our mission is to organise the world’s medical information and make it universally accessible and useful to Doctors through technological innovation.
 
   // END SECTION :: mission
+
+  // BEGIN SECTION :: who
+  section.who
+    .container
+      p.who__title(data-aos="fade-up") Who We Are
+      p.who__desc(data-aos="fade-up") We are digital healthcare communications agency founded more than a decade ago by a team of experienced digital gurus, medical education professionals and pharmaceutical marketers. We have an overwhelming desire to set a new standard of delivery for digital medical education.
+      .who__line(data-aos="fade-up")
+      p.who__title(data-aos="fade-up") What We Do
+      .who__grid
+        .who__item(data-aos="fade-up")
+          .who__image
+            .who__image-container
+              img(src="img/medical.svg", alt="")
+          p Digital Medical Education
+        .who__item(data-aos="fade-up" data-aos-delay="50")
+          .who__image
+            .who__image-container
+              img(src="img/boards.svg", alt="")
+          p Medical Advisory Boards
+        .who__item(data-aos="fade-up" data-aos-delay="100")
+          .who__image
+            .who__image-container
+              img(src="img/data.svg", alt="")
+          p Data Analytics
+      p.who__desc(data-aos="fade-up" data-aos-delay="150") We innovate, collaborate, educate and build healthcare communities world-wide. 
+        br
+        | Data centricity, campaign intelligence and machine learning is really at the heart of what we do. We wholeheartedly foster a data driven outcomes-based approach for all our activities and campaigns.
+
+  // END SECTION :: who
+
+  // BEGIN SECTION :: cardiology
+  section.cardiology
+    .container
+      .cardiology__grid
+        .cardiology__profs(data-aos="fade-up")
+          ul
+            li
+              a.cardiology__item.is-active(href="#") Cardiology
+            li
+              a.cardiology__item(href="#") Gastroenterology
+            li
+              a.cardiology__item(href="#") Urology
+            li
+              a.cardiology__item(href="#") Dermatology
+            li
+              a.cardiology__item(href="#") Nephrology
+            li
+              a.cardiology__item(href="#") Pulmonology
+            li
+              a.cardiology__item(href="#") Hepatology
+            li
+              a.cardiology__item(href="#") Ophthalmology
+            li
+              a.cardiology__item(href="#") Obstetrics and Gynecology
+            li
+              a.cardiology__item(href="#") Anesthesiology
+            li
+              a.cardiology__item(href="#") Hematology
+            li
+              a.cardiology__item(href="#") Endocrinology
+            li
+              a.cardiology__item(href="#") Pediatrics
+            li
+              a.cardiology__item(href="#") Rheumatology
+            li
+              a.cardiology__item(href="#") Psychiatry
+            li
+              a.cardiology__item(href="#") Infectious diseases
+            li
+              a.cardiology__item(href="#") Neurology
+            li
+              a.cardiology__item(href="#") Oncology
+        .cardiology__content(data-aos="fade-up")
+          .cardiology__tab
+            .cardiology__title Our Cardiology advisory board
+            .cardiology__body
+              p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
+              p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
+              p.cardiology__info • John McMurray, The University of Glasgow, UK
+              p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
+              p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
+              p.cardiology__info • Bryan Williams, University College London, UK
+              p.cardiology__info • Jean-Luc Vachiéry, Erasme University Hospital, Belgium
+              p.cardiology__info • Faiez Zannad, CHU and University Henri Poincaré, France
+              p.cardiology__info • Hans-Christoph Diener, University Hospital Essen, Germany
+          .cardiology__tab
+            .cardiology__title Our Gastroenterology advisory board
+            .cardiology__body
+              p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
+              p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
+              p.cardiology__info • John McMurray, The University of Glasgow, UK
+              p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
+              p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
+          .cardiology__tab
+            .cardiology__title Our Urology advisory board
+            .cardiology__body
+              p.cardiology__info • Urology doctor
+          .cardiology__tab
+            .cardiology__title Our Dermatology advisory board
+            .cardiology__body
+              p.cardiology__info • Dermatology doctor
+          .cardiology__tab
+            .cardiology__title Our Nephrology advisory board
+            .cardiology__body
+              p.cardiology__info • Nephrology doctor
+          .cardiology__tab
+            .cardiology__title Our Pulmonology advisory board
+            .cardiology__body
+              p.cardiology__info • Pulmonology doctor
+          .cardiology__tab
+            .cardiology__title Our Hepatology advisory board
+            .cardiology__body
+              p.cardiology__info • Hepatology doctor
+          .cardiology__tab
+            .cardiology__title Our Ophthalmology advisory board
+            .cardiology__body
+              p.cardiology__info • Ophthalmology doctor
+          .cardiology__tab
+            .cardiology__title Our Obstetrics and Gynecology advisory board
+            .cardiology__body
+              p.cardiology__info • Obstetrics and Gynecology doctor
+          .cardiology__tab
+            .cardiology__title Our Anesthesiology advisory board
+            .cardiology__body
+              p.cardiology__info • Anesthesiology doctor
+          .cardiology__tab
+            .cardiology__title Our Hematology advisory board
+            .cardiology__body
+              p.cardiology__info • Hematology doctor
+          .cardiology__tab
+            .cardiology__title Our Endocrinology advisory board
+            .cardiology__body
+              p.cardiology__info • Endocrinology doctor
+          .cardiology__tab
+            .cardiology__title Our Pediatrics advisory board
+            .cardiology__body
+              p.cardiology__info • Pediatrics doctor
+          .cardiology__tab
+            .cardiology__title Our Rheumatology advisory board
+            .cardiology__body
+              p.cardiology__info • Rheumatology doctor
+          .cardiology__tab
+            .cardiology__title Our Psychiatry advisory board
+            .cardiology__body
+              p.cardiology__info • Psychiatry doctor
+          .cardiology__tab
+            .cardiology__title Our Infectious diseases advisory board
+            .cardiology__body
+              p.cardiology__info • Infectious diseases doctor
+          .cardiology__tab
+            .cardiology__title Our Neurology advisory board
+            .cardiology__body
+              p.cardiology__info • Neurology doctor
+          .cardiology__tab
+            .cardiology__title Our Oncology advisory board
+            .cardiology__body
+              p.cardiology__info • Oncology doctor
+  // END SECTION :: cardiology
+
+  // BEGIN SECTION :: pre-footer
+  section.pre-footer
+    .container
+      p.pre-footer__title(data-aos="fade-up") Worldwide Locations
+      .pre-footer__grid
+        .pre-footer__left
+          .pre-footer__item(data-aos="fade-up")
+            p.pre-footer__country USA
+            p.pre-footer__about Delaware, County of Sussex. 
+              br
+              | USA
+          .pre-footer__item(data-aos="fade-up")
+            p.pre-footer__country EUROPE
+            p.pre-footer__about Holborn Viaduct, London. 
+              br
+              | United Kingdom
+          .pre-footer__item(data-aos="fade-up")
+            p.pre-footer__country ASIA PACIFIC
+            p.pre-footer__about Wanchai, Hong Kong. 
+             br
+             | China
+          .pre-footer__item(data-aos="fade-up")
+            p.pre-footer__title Our Products
+            a.pre-footer__link(href="#" target="_blank") MED-SIMS.ORG
+            a.pre-footer__link(href="#" target="_blank") Kases.me
+        .pre-footer__form
+          form.js-footer-form(action="#")
+            .input-container(data-aos="fade-up")
+              input(type="text" placeholder="Name" name="name")
+            .input-container(data-aos="fade-up")
+              input(type="text" placeholder="Email" name="mail")
+            .input-container(data-aos="fade-up")
+              input(type="text" placeholder="Confirm Email Address" name="mailConfirm")
+            .input-container(data-aos="fade-up")
+              textarea(placeholder="Your message..." name="mess")
+            .pre-footer__button-container(data-aos="fade-up")
+              input.btn(type="submit", value="Submit")
+
+  // END SECTION :: pre-footer

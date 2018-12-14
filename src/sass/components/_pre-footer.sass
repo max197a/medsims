@@ -1,0 +1,78 @@
+.pre-footer
+  padding: 93px 0 42px
+  background: #152339
+  &__title
+    font-size: 36px
+    font-family: $black
+    color: #fff
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding-top: 35px
+  &__item
+    margin-top: 50px
+    &:first-child
+      margin-top: 0
+  &__left
+    max-width: 250px
+    width: 100%
+    margin-right: 30px
+  &__country
+    text-transform: uppercase
+    color: #D2B57F
+    font-size: 24px
+    font-family: $black
+  &__about
+    margin-top: 8px
+    font-size: 16px
+    font-family: $book
+    color: #fff
+  &__link
+    display: block
+    color: #8A9AB0
+    margin-top: 15px
+    margin-bottom: -10px
+    transition: all $transitionSpeed $ease
+    text-transform: uppercase
+    font-size: 16px
+    font-family: $book
+    &:hover
+      color: #fff
+  &__form
+    max-width: 862px
+    width: 100%
+    margin-left: auto
+    .input-container
+      margin-bottom: 20px
+      input,
+      textarea
+        font-family: $book
+        font-size: 16px
+        line-height: normal
+        padding: 20px 22px
+        color: #fff
+        border: none
+        background: #3A4B66
+        width: 100%
+        resize: none
+        &::-webkit-input-placeholder
+          color: rgba(255,255,255,0.5)
+        &::-moz-placeholder
+          color: rgba(255,255,255,0.5)
+        &:-ms-input-placeholder
+          color: rgba(255,255,255,0.5)
+        &:-moz-placeholder
+          color: rgba(255,255,255,0.5)
+      textarea
+        min-height: 150px
+  &__button-container
+    text-align: right
+    padding-top: 14px
+    .btn
+      background: transparent
+      cursor: pointer
+      padding: 18px 41px
+      &:hover
+        background: #fff
+        color: #152339
