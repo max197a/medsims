@@ -10,14 +10,20 @@
     align-items: flex-start
     justify-content: flex-start
     padding-top: 35px
+    position: relative
   &__item
     margin-top: 50px
     &:first-child
       margin-top: 0
+    &--products
+      position: absolute
+      left: 0
+      bottom: 38px
   &__left
     max-width: 250px
     width: 100%
     margin-right: 30px
+    padding-bottom: 135px
   &__country
     text-transform: uppercase
     color: #D2B57F
@@ -31,7 +37,7 @@
   &__link
     display: block
     color: #8A9AB0
-    margin-top: 15px
+    margin-top: 20px
     margin-bottom: -10px
     transition: all $transitionSpeed $ease
     text-transform: uppercase
@@ -45,17 +51,24 @@
     margin-left: auto
     .input-container
       margin-bottom: 20px
+      position: relative
+      &.has-error
+        input,
+        textarea
+          border: 2px solid #ca0c0c
       input,
       textarea
         font-family: $book
         font-size: 16px
         line-height: normal
-        padding: 20px 22px
+        padding: 18px 22px
         color: #fff
         border: none
         background: #3A4B66
         width: 100%
         resize: none
+        border: 2px solid #3A4B66
+        transition: all $transitionSpeed $ease
         &::-webkit-input-placeholder
           color: rgba(255,255,255,0.5)
         &::-moz-placeholder
@@ -66,6 +79,17 @@
           color: rgba(255,255,255,0.5)
       textarea
         min-height: 150px
+      label
+        position: absolute
+        padding: 4px 6px
+        font-size: 11px
+        font-family: $book
+        color: #ca0c0c
+        background: #fff
+        bottom: -7px
+        left: 22px
+        transition: all $transitionSpeed $ease
+
   &__button-container
     text-align: right
     padding-top: 14px
@@ -76,3 +100,39 @@
       &:hover
         background: #fff
         color: #152339
+
++r($tablet)
+  .pre-footer
+    padding: 93px 0 42px
+    .container
+      padding: 0 16px
+    &__title
+      text-align: center
+      line-height: 1.25
+    &__grid
+      flex-wrap: wrap
+      text-align: center
+      position: relative
+    &__left
+      width: 100%
+      max-width: 100%
+      position: relative
+      margin-right: 0
+      padding-bottom: 0
+    &__item
+      margin-top: 31px
+      width: 100%
+      &--products
+        position: static
+        margin-top: 93px
+        padding-bottom: 26px
+    &__link
+      margin-top: 25px
+      margin-bottom: 0
+    &__form
+      padding-top: 76px
+      padding-bottom: 0
+    &__button-container
+      padding-top: 17px
+      text-align: center
+    

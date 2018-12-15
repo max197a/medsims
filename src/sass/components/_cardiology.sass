@@ -9,7 +9,7 @@
     align-items: flex-start
     justify-content: flex-start
   &__profs
-    min-width: 300px
+    min-width: 250px
     padding-top: 11px
     display: flex
     flex-direction: column
@@ -27,7 +27,9 @@
     color: #fff
     padding-left: 20px
   &__content
-    width: calc(100% - 346px)
+    max-width: 884px
+    padding-left: 30px
+    width: 100%
     margin-left: auto
   &__body
     display: flex
@@ -36,6 +38,7 @@
     align-items: flex-start
     justify-content: space-between
   &__info
+    min-width: 300px
     width: 47%
     padding: 0 0 0 20px
     font-size: 20px
@@ -81,3 +84,78 @@
     display: none
     &:first-child
       display: block
+
++r($desktop)
+  .cardiology
+    padding: 80px 0
+    &__title
+      font-size: 32px
+    &__info
+      width: 100%
+      margin-top: 35px
+      margin-bottom: 0
+    &__content
+      padding-left: 0
+
++r($tablet)
+  .cardiology
+    padding: 70px 0 90px
+    &__grid
+      flex-wrap: wrap
+    &__profs
+      min-width: 1px
+      width: 100%
+      padding: 0 25px
+      position: relative
+      padding-bottom: 46px
+      margin-bottom: 58px
+      border-bottom: 1px solid rgba(255,255,255,0.25)
+    &__title
+      padding-left: 0
+      text-align: center
+      width: 100%
+      font-size: 36px
+    &__info
+      padding-left: 0
+      margin-top: 34px
+    &__body
+      padding-top: 30px
+    .slick-dots
+      // display: none
+    .pagingInfo
+      position: absolute
+      color: #8A9AB0
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 32px
+      letter-spacing: 2px
+    &__item
+      width: 100%
+      text-align: center
+      font-size: 20px
+      opacity: 1
+      padding-left: 0
+      &.is-active
+        font-size: 20px
+        opacity: 1
+        padding-left: 0
+      &:before
+        display: none
+    .slick-arrow
+      position: absolute
+      width: 30px
+      height: 30px
+      top: 12px
+      font-size: 0
+      padding: 0
+      margin: 0
+      color: transparent
+      border: none
+      &.slick-prev
+        left: -34px
+        background: url(../img/arrow-left.svg) center center no-repeat
+        background-size: contain
+      &.slick-next
+        right: -34px
+        background: url(../img/arrow-right.svg) center center no-repeat
+        background-size: contain

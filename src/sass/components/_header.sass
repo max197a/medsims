@@ -54,11 +54,13 @@
     &:hover
       &:before
         width: 100%
+  &__image
+    display: none
   &__socials
     position: absolute
     right: 0
     top: -7px
-    padding-right: 10px
+    padding-right: 30px
     margin-right: -10px
     a
       margin-left: 11px
@@ -116,13 +118,80 @@
 //           height: 35px
 //           margin-top: -12px
 
++r($desktop)
+  .header
+    .container
+      justify-content: flex-start
+    &__socials
+      padding-right: 40px
+
 +r($tablet)
   .header
-    
+    // padding-top: 26px
+    // padding-bottom: 26px
+    padding: 0
+    &.is-fixed-start
+      transform: translateY(-100px)
+      background: #2F62AA
+      border-bottom: 1px solid #152339
+      
+      // transition: all 1s $ease
+      transition: all 1s $ease
+      .header__wrapper
+        padding: 15px 0
+    &.is-fixed
+      position: fixed
+      transform: translateY(0)
+    &__socials
+      display: none
+    &__wrapper
+      width: 100%
+      display: inline-block
+      padding: 26px 0
+    .container
+      padding: 0 16px
     .hamburger
       display: block
+      position: relative
+      z-index: 2
+      opacity: 1
+      margin-right: auto
+      padding: 0
+      font-size: 0
       .hamburger-inner
         background: $whiteColor
         &:before,
         &:after
           background: $whiteColor
+    &__image
+      display: block
+      margin: 5% auto
+      img
+        width: 123px
+        height: auto
+    &__list
+      position: absolute
+      width: 100%
+      background: #2F62AA
+      top: 0
+      left: 0
+      min-height: 100vh
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      // padding: 80px 0
+      transform: translateY(-110%)
+      transition: all 1s $ease
+      // &:before
+      //   position: absolute
+      //   display: block
+      //   content: ''
+      //   width: 100%
+      //   height: 200px
+      //   top: 100%
+      //   background: #2F62AA
+      &.is-active
+        transform: translateY(0)
+    &__item
+      margin: 5% auto

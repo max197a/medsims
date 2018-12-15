@@ -7,7 +7,7 @@ block content
   // BEGIN SECTION :: firstscreen
   section.firstscreen
     .container
-      img(src="img/logotype.svg", alt="" data-aos='fade-up')
+      img(src="img/logotype.png", alt="" data-aos='fade-up')
       h1(data-aos='fade-up') SEI-Healthcare
       h2(data-aos='fade-up') “Excellence In All We Do”
       .firstscreen__line(data-aos='fade-up')
@@ -27,7 +27,7 @@ block content
   // END SECTION :: firstscreen
 
   // BEGIN SECTION :: mission
-  section.mission
+  section.mission#section-about
     .container
       p.mission__title(data-aos="fade-up") Our Mission
       p.mission__info(data-aos="fade-up") Our mission is to organise the world’s medical information and make it universally accessible and useful to Doctors through technological innovation.
@@ -35,7 +35,7 @@ block content
   // END SECTION :: mission
 
   // BEGIN SECTION :: who
-  section.who
+  section.who#section-board
     .container
       p.who__title(data-aos="fade-up") Who We Are
       p.who__desc(data-aos="fade-up") We are digital healthcare communications agency founded more than a decade ago by a team of experienced digital gurus, medical education professionals and pharmaceutical marketers. We have an overwhelming desire to set a new standard of delivery for digital medical education.
@@ -64,11 +64,11 @@ block content
   // END SECTION :: who
 
   // BEGIN SECTION :: cardiology
-  section.cardiology
+  section.cardiology#section-platforms
     .container
       .cardiology__grid
         .cardiology__profs(data-aos="fade-up")
-          ul
+          ul(js-professional)
             li
               a.cardiology__item.is-active(href="#") Cardiology
             li
@@ -105,95 +105,97 @@ block content
               a.cardiology__item(href="#") Neurology
             li
               a.cardiology__item(href="#") Oncology
-        .cardiology__content(data-aos="fade-up")
-          .cardiology__tab
-            .cardiology__title Our Cardiology advisory board
-            .cardiology__body
-              p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
-              p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
-              p.cardiology__info • John McMurray, The University of Glasgow, UK
-              p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
-              p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
-              p.cardiology__info • Bryan Williams, University College London, UK
-              p.cardiology__info • Jean-Luc Vachiéry, Erasme University Hospital, Belgium
-              p.cardiology__info • Faiez Zannad, CHU and University Henri Poincaré, France
-              p.cardiology__info • Hans-Christoph Diener, University Hospital Essen, Germany
-          .cardiology__tab
-            .cardiology__title Our Gastroenterology advisory board
-            .cardiology__body
-              p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
-              p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
-              p.cardiology__info • John McMurray, The University of Glasgow, UK
-              p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
-              p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
-          .cardiology__tab
-            .cardiology__title Our Urology advisory board
-            .cardiology__body
-              p.cardiology__info • Urology doctor
-          .cardiology__tab
-            .cardiology__title Our Dermatology advisory board
-            .cardiology__body
-              p.cardiology__info • Dermatology doctor
-          .cardiology__tab
-            .cardiology__title Our Nephrology advisory board
-            .cardiology__body
-              p.cardiology__info • Nephrology doctor
-          .cardiology__tab
-            .cardiology__title Our Pulmonology advisory board
-            .cardiology__body
-              p.cardiology__info • Pulmonology doctor
-          .cardiology__tab
-            .cardiology__title Our Hepatology advisory board
-            .cardiology__body
-              p.cardiology__info • Hepatology doctor
-          .cardiology__tab
-            .cardiology__title Our Ophthalmology advisory board
-            .cardiology__body
-              p.cardiology__info • Ophthalmology doctor
-          .cardiology__tab
-            .cardiology__title Our Obstetrics and Gynecology advisory board
-            .cardiology__body
-              p.cardiology__info • Obstetrics and Gynecology doctor
-          .cardiology__tab
-            .cardiology__title Our Anesthesiology advisory board
-            .cardiology__body
-              p.cardiology__info • Anesthesiology doctor
-          .cardiology__tab
-            .cardiology__title Our Hematology advisory board
-            .cardiology__body
-              p.cardiology__info • Hematology doctor
-          .cardiology__tab
-            .cardiology__title Our Endocrinology advisory board
-            .cardiology__body
-              p.cardiology__info • Endocrinology doctor
-          .cardiology__tab
-            .cardiology__title Our Pediatrics advisory board
-            .cardiology__body
-              p.cardiology__info • Pediatrics doctor
-          .cardiology__tab
-            .cardiology__title Our Rheumatology advisory board
-            .cardiology__body
-              p.cardiology__info • Rheumatology doctor
-          .cardiology__tab
-            .cardiology__title Our Psychiatry advisory board
-            .cardiology__body
-              p.cardiology__info • Psychiatry doctor
-          .cardiology__tab
-            .cardiology__title Our Infectious diseases advisory board
-            .cardiology__body
-              p.cardiology__info • Infectious diseases doctor
-          .cardiology__tab
-            .cardiology__title Our Neurology advisory board
-            .cardiology__body
-              p.cardiology__info • Neurology doctor
-          .cardiology__tab
-            .cardiology__title Our Oncology advisory board
-            .cardiology__body
-              p.cardiology__info • Oncology doctor
+          span.pagingInfo 1/18
+        .cardiology__content
+          .cardiology__slider(js-professional-info)
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Cardiology advisory board
+              .cardiology__body
+                p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
+                p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
+                p.cardiology__info • John McMurray, The University of Glasgow, UK
+                p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
+                p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
+                p.cardiology__info • Bryan Williams, University College London, UK
+                p.cardiology__info • Jean-Luc Vachiéry, Erasme University Hospital, Belgium
+                p.cardiology__info • Faiez Zannad, CHU and University Henri Poincaré, France
+                p.cardiology__info • Hans-Christoph Diener, University Hospital Essen, Germany
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Gastroenterology advisory board
+              .cardiology__body
+                p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
+                p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
+                p.cardiology__info • John McMurray, The University of Glasgow, UK
+                p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
+                p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Urology advisory board
+              .cardiology__body
+                p.cardiology__info • Urology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Dermatology advisory board
+              .cardiology__body
+                p.cardiology__info • Dermatology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Nephrology advisory board
+              .cardiology__body
+                p.cardiology__info • Nephrology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Pulmonology advisory board
+              .cardiology__body
+                p.cardiology__info • Pulmonology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Hepatology advisory board
+              .cardiology__body
+                p.cardiology__info • Hepatology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Ophthalmology advisory board
+              .cardiology__body
+                p.cardiology__info • Ophthalmology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Obstetrics and Gynecology advisory board
+              .cardiology__body
+                p.cardiology__info • Obstetrics and Gynecology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Anesthesiology advisory board
+              .cardiology__body
+                p.cardiology__info • Anesthesiology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Hematology advisory board
+              .cardiology__body
+                p.cardiology__info • Hematology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Endocrinology advisory board
+              .cardiology__body
+                p.cardiology__info • Endocrinology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Pediatrics advisory board
+              .cardiology__body
+                p.cardiology__info • Pediatrics doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Rheumatology advisory board
+              .cardiology__body
+                p.cardiology__info • Rheumatology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Psychiatry advisory board
+              .cardiology__body
+                p.cardiology__info • Psychiatry doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Infectious diseases advisory board
+              .cardiology__body
+                p.cardiology__info • Infectious diseases doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Neurology advisory board
+              .cardiology__body
+                p.cardiology__info • Neurology doctor
+            .cardiology__tab(data-aos="fade-up")
+              .cardiology__title Our Oncology advisory board
+              .cardiology__body
+                p.cardiology__info • Oncology doctor
   // END SECTION :: cardiology
 
   // BEGIN SECTION :: pre-footer
-  section.pre-footer
+  section.pre-footer#section-contacts
     .container
       p.pre-footer__title(data-aos="fade-up") Worldwide Locations
       .pre-footer__grid
@@ -213,10 +215,6 @@ block content
             p.pre-footer__about Wanchai, Hong Kong. 
              br
              | China
-          .pre-footer__item(data-aos="fade-up")
-            p.pre-footer__title Our Products
-            a.pre-footer__link(href="#" target="_blank") MED-SIMS.ORG
-            a.pre-footer__link(href="#" target="_blank") Kases.me
         .pre-footer__form
           form.js-footer-form(action="#")
             .input-container(data-aos="fade-up")
@@ -229,5 +227,9 @@ block content
               textarea(placeholder="Your message..." name="mess")
             .pre-footer__button-container(data-aos="fade-up")
               input.btn(type="submit", value="Submit")
+        .pre-footer__item.pre-footer__item--products(data-aos="fade-up")
+          p.pre-footer__title Our Products
+          a.pre-footer__link(href="#" target="_blank") MED-SIMS.ORG
+          a.pre-footer__link(href="#" target="_blank") Kases.me
 
   // END SECTION :: pre-footer

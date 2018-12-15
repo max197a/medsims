@@ -49,6 +49,7 @@ $(document).ready(function() {
   // HAMBURGER TOGGLER
   _document.on("click", "[js-hamburger]", function() {
     $(this).toggleClass("is-active");
+    $(".header__list").toggleClass("is-active");
     $(".header__mobile").toggleClass("is-active");
     $("body").toggleClass("is-fixed");
     $("html").toggleClass("is-fixed");
@@ -78,7 +79,10 @@ $(document).ready(function() {
 
   function closeMobileMenu() {
     $("[js-hamburger]").removeClass("is-active");
-    $(".header__mobile").removeClass("is-active");
+    $(".header__list").removeClass("is-active");
+    // $(".header__mobile").removeClass("is-active");
+    // $("body").removeClass("is-fixed");
+    // $("html").removeClass("is-fixed");
   }
 
   // header scroll
@@ -123,12 +127,14 @@ $(document).ready(function() {
       scrollToSection($(el));
       $("body").removeClass("is-fixed");
       $("html").removeClass("is-fixed");
+      $(".header__list").removeClass("is-active");
+      $("[js-hamburger]").removeClass("is-active");
       return false;
     });
 
   function scrollToSection(el) {
     var headerHeight = $(".header").height();
-    var targetScroll = el.offset().top - headerHeight;
+    var targetScroll = el.offset().top - headerHeight / 100;
     // document.scrollingElement || document.documentElement
 
     TweenLite.to(window, 1, {
@@ -141,7 +147,65 @@ $(document).ready(function() {
   // SLIDERS
   //////////
 
-  function initSliders() {}
+  function initSliders() {
+    (function() {
+      function personalInfoSliderInit() {
+        if ($(document).width() > 768) {
+          if ($("[js-professional]").hasClass("slick-initialized"))
+            $("[js-professional]").slick("unslick");
+          //
+          if ($("[js-professional-info]").hasClass("slick-initialized"))
+            $("[js-professional-info]").slick("unslick");
+        } else {
+          if (!$("[js-professional]").hasClass("slick-initialized")) {
+            $("[js-professional]").slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true,
+              // dots: false,
+              // dots: true,
+              customPaging: function(slider, i) {
+                var thumb = $(slider.$slides[i]).data();
+                return "<a>" + i + "</a>";
+              },
+              asNavFor: "[js-professional-info]"
+            });
+          }
+
+          //custom function showing current slide
+          var $status = $(".pagingInfo");
+          var $slickElement = $("[js-professional]");
+
+          $slickElement.on("init reInit afterChange", function(
+            event,
+            slick,
+            currentSlide,
+            nextSlide
+          ) {
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $status.text(i + "/" + slick.slideCount);
+          });
+
+          if (!$("[js-professional-info]").hasClass("slick-initialized")) {
+            $("[js-professional-info]").slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              asNavFor: "[js-professional]",
+              dots: false,
+              arrows: false
+            });
+          }
+        }
+      }
+
+      personalInfoSliderInit();
+
+      $(window).resize(function() {
+        personalInfoSliderInit();
+      });
+    })();
+  }
 
   ////////////////
   // FORM VALIDATIONS
@@ -167,27 +231,24 @@ $(document).ready(function() {
     };
     var validateSubmitHandler = function(form) {
       $("[js-trigger-thanks-popup]").click();
-      $(form)
-        .find("input")
-        .val("");
-      // initSubmit();
-      // $.ajax({
-      //   type: "POST",
-      //   url: $(form).attr("action"),
-      //   data: $(form).serialize(),
-      //   success: function(response) {
-      //     $(form).removeClass("loading");
-      //     var data = $.parseJSON(response);
-      //     if (data.status == "success") {
-      //       // do something I can't test
-      //     } else {
-      //       $(form)
-      //         .find("[data-error]")
-      //         .html(data.message)
-      //         .show();
-      //     }
-      //   }
-      // });
+      initSubmit();
+      $.ajax({
+        type: "POST",
+        url: $(form).attr("action"),
+        data: $(form).serialize(),
+        success: function(response) {
+          $(form).removeClass("loading");
+          var data = $.parseJSON(response);
+          if (data.status == "success") {
+            // do something I can't test
+          } else {
+            $(form)
+              .find("[data-error]")
+              .html(data.message)
+              .show();
+          }
+        }
+      });
     };
 
     /////////////////////
@@ -206,10 +267,10 @@ $(document).ready(function() {
         mess: "required"
       },
       messages: {
-        name: "required",
-        mail: "required",
-        mailConfirm: "required",
-        mess: "required"
+        name: "This field is required!",
+        mail: "This field is required!",
+        mailConfirm: "This field is required!",
+        mess: "This field is required!"
       }
     });
   }
