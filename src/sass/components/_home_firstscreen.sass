@@ -8,6 +8,39 @@
   align-items: center
   padding: 100px 0
   transition: all 1s $ease
+  position: relative
+  z-index: 3
+  &__video
+    position: fixed
+    left: 0
+    top: 0
+    height: 100%
+    // min-height: 100vh
+    width: 100%
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background: rgb(47,98,170)
+      background: linear-gradient(180deg, rgba(47,98,170,1) 0%, rgba(47,98,170,0) 100%)
+      z-index: 2
+      top: 0
+      left: 0
+    video
+      // height: 100%
+      // min-height: 100vh
+      // width: 100%
+      // min-width: 100vw
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
   // &.is-hidden
   //   margin-top: -100vh
   img
@@ -51,6 +84,8 @@
   .firstscreen
     // padding: 99px 0 123px
     padding: 0
+    &__video
+      display: none
     .container
       padding: 99px 0 123px
     img

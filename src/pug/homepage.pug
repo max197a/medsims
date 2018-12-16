@@ -6,6 +6,9 @@ block content
 
   // BEGIN SECTION :: firstscreen
   section.firstscreen
+    .firstscreen__video
+      video(autoplay muted loop)
+        source(src="img/earth.mp4" type="video/mp4")
     .container
       img(src="img/logotype.png", alt="" data-aos='fade-up')
       h1(data-aos='fade-up') SEI-Healthcare
@@ -22,7 +25,7 @@ block content
           span |
           | LATAM
       .firscreen__button-container(data-aos='fade-up')
-        a.firstscreen__button.btn(href="#") Find out more
+        a.firstscreen__button.btn(href="#section-about") Find out more
   
   // END SECTION :: firstscreen
 
@@ -36,6 +39,9 @@ block content
 
   // BEGIN SECTION :: who
   section.who#section-board
+    .who__video
+      video(autoplay muted loop)
+        source(src="img/office.mp4" type="video/mp4")
     .container
       p.who__title(data-aos="fade-up") Who We Are
       p.who__desc(data-aos="fade-up") We are digital healthcare communications agency founded more than a decade ago by a team of experienced digital gurus, medical education professionals and pharmaceutical marketers. We have an overwhelming desire to set a new standard of delivery for digital medical education.

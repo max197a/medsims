@@ -2,8 +2,39 @@
   background: url(../img/bg-who.jpg) center center no-repeat
   background-size: cover
   padding: 193px 0 148px
+  position: relative
+  z-index: 3
   .container
     text-align: center
+  &__video
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    // min-height: 100vh
+    width: 100%
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      z-index: 2
+      top: 0
+      left: 0
+    video
+      // height: 100%
+      // min-height: 100vh
+      // width: 100%
+      // min-width: 100vw
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
   &__title
     font-size: 36px
     font-family: $black
@@ -44,6 +75,8 @@
 +r($tablet)
   .who
     padding: 95px 0
+    &__video
+      display: none
     &__line
       margin: 41px auto 38px
     &__grid

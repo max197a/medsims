@@ -21,6 +21,7 @@ $(document).ready(function() {
     // initParallax();
     initValidations();
     initScrollMonitor();
+    initSmoothScroll();
   }
 
   // this is a master function which should have all functionality
@@ -140,6 +141,36 @@ $(document).ready(function() {
     TweenLite.to(window, 1, {
       scrollTo: { y: targetScroll, autoKill: false },
       ease: easingSwing
+    });
+  }
+
+  //////////
+  // SLIDERS
+  //////////
+
+  function initSmoothScroll() {
+    $(function() {
+      var $window = $(window); //Window object
+
+      var scrollTime = 1.2; //Scroll time
+      var scrollDistance = 170; //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+
+      $window.on("mousewheel DOMMouseScroll", function(event) {
+        event.preventDefault();
+
+        var delta =
+          event.originalEvent.wheelDelta / 120 ||
+          -event.originalEvent.detail / 3;
+        var scrollTop = $window.scrollTop();
+        var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+
+        TweenMax.to($window, scrollTime, {
+          scrollTo: { y: finalScroll, autoKill: true },
+          ease: Power1.easeOut, //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+          autoKill: true,
+          overwrite: 5
+        });
+      });
     });
   }
 
