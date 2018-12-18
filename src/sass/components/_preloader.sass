@@ -49,12 +49,17 @@
     margin: 25px 0 15px
     position: relative
     z-index: 3
+    text-align: center
   &__info
     font-size: 18px
     color: #fff
     font-family: $light
     position: relative
     z-index: 3
+    span 
+      font-size: 18px
+      color: #fff
+      font-family: $light
 
 .lds-ellipsis
   display: inline-block
@@ -104,3 +109,10 @@
 
   100%
     transform: translate(19px, 0)
+
++r($tablet)
+  .preloader
+    &__title
+      font-size: 44px
+    &__info
+      text-align: center
