@@ -5,16 +5,18 @@ extends shared/_layout
 block content
 
   // BEGIN SECTION :: firstscreen
+  a.back-to-top(href="#section-top")
+    img(src="img/top-arrow.svg", alt="")
   section.firstscreen
     .firstscreen__video
       video(autoplay muted loop)
         source(src="img/earth.mp4" type="video/mp4")
     .container
       img(src="img/logotype.png", alt="" data-aos="fade-up")
-      h1(data-aos="fade-up") SEI-Healthcare
-      h2(data-aos="fade-up") “Excellence In All We Do”
-      .firstscreen__line(data-aos="fade-up")
-      .firstscreen__list(data-aos="fade-up")
+      h1(data-aos="fade-up" data-aos-delay="100") SEI-Healthcare
+      h2(data-aos="fade-up" data-aos-delay="150") “Excellence In All We Do”
+      .firstscreen__line(data-aos="fade-up" data-aos-delay="200")
+      .firstscreen__list(data-aos="fade-up" data-aos-delay="250")
         p Asia
           span |
           | Europe
@@ -24,8 +26,12 @@ block content
           | Canada
           span |
           | LATAM
-      .firscreen__button-container(data-aos="fade-up")
+      .firscreen__button-container(data-aos="fade-up" data-aos-delay="300")
         a.firstscreen__button.btn(href="#section-about") Find out more
+      .firstscreen__scroll(data-aos="fade-up" data-aos-delay="350")
+        .firstscreen__scroll-container
+          a.firstscreen__mouse(href="#section-about")
+            .firstscreen__dot
   
   // END SECTION :: firstscreen
 

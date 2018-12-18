@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   // single time initialization
   // legacySupport();
-  initaos();
+  // initaos();
   var easingSwing = [0.02, 0.01, 0.47, 1];
 
   function pageReady() {
@@ -31,9 +31,9 @@ $(document).ready(function() {
   // COMMON
   //////////
 
-  function initaos() {
-    AOS.init();
-  }
+  // function initaos() {
+  //   AOS.init();
+  // }
 
   // function legacySupport() {
   //   // svg support for laggy browsers
@@ -86,6 +86,31 @@ $(document).ready(function() {
     // $("html").removeClass("is-fixed");
   }
 
+  ////////
+  // PRELOADER
+  ////////
+
+  (function() {
+    var $preloader = $(".preloader");
+
+    $(window).on("load", function() {
+      setTimeout(function() {
+        $preloader.addClass("is-loaded");
+
+        // $("body").css("overflow", "hidden");
+        $("html").addClass("is-loaded");
+
+        // AOS.init();
+      }, 2000);
+      setTimeout(function() {
+        $preloader.addClass("is-loading");
+      }, 1000);
+      setTimeout(function() {
+        AOS.init();
+      }, 3000);
+    });
+  })();
+
   // header scroll
   _window.on(
     "scroll",
@@ -101,8 +126,10 @@ $(document).ready(function() {
       }
       if (scroll >= heroHeight - headerHeight / 1) {
         $(".header").addClass("is-fixed");
+        $(".back-to-top").addClass("is-active");
       } else {
         $(".header").removeClass("is-fixed");
+        $(".back-to-top").removeClass("is-active");
       }
     }, 25)
   );
