@@ -32,13 +32,14 @@
     .preloader__overlay
       opacity: 0
   &.is-loaded
-    margin-top: -100%
+    transform: translateY(-100%)
     opacity: 0
-  img
-    width: 136px
-    height: auto
+  &__img
     position: relative
     z-index: 3
+    img
+      width: 136px
+      height: auto
 
   &__title
     font-size: 64px
@@ -62,6 +63,8 @@
       font-family: $light
   &__health
     margin: 35px 0 22px
+    position: relative
+    z-index: 3
     img
       max-width: 280px
       width: 100%
