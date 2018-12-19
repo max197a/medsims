@@ -20,8 +20,7 @@ $(document).ready(function() {
     initSliders();
     // initParallax();
     initValidations();
-    initScrollMonitor();
-    initSmoothScroll();
+    // initSmoothScroll();
   }
 
   // this is a master function which should have all functionality
@@ -134,16 +133,6 @@ $(document).ready(function() {
     }, 25)
   );
 
-  // $(window).scroll(function() {
-  //   var scroll = $(window).scrollTop();
-
-  //   if (scroll >= 1) {
-  //     $(".firstscreen").addClass("is-hidden");
-  //   } else {
-  //     $(".firstscreen").removeClass("is-hidden");
-  //   }
-  // });
-
   // Prevent # behavior
   _document
     .on("click", '[href="#"]', function(e) {
@@ -171,35 +160,35 @@ $(document).ready(function() {
     });
   }
 
-  //////////
-  // SLIDERS
-  //////////
+  // //////////
+  // // SLIDERS
+  // //////////
 
-  function initSmoothScroll() {
-    $(function() {
-      var $window = $(window); //Window object
+  // function initSmoothScroll() {
+  //   $(function() {
+  //     var $window = $(window); //Window object
 
-      var scrollTime = 1.2; //Scroll time
-      var scrollDistance = 170; //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+  //     var scrollTime = 1.2; //Scroll time
+  //     var scrollDistance = 170; //Distance. Use smaller value for shorter scroll and greater value for longer scroll
 
-      $window.on("mousewheel DOMMouseScroll", function(event) {
-        event.preventDefault();
+  //     $window.on("mousewheel DOMMouseScroll", function(event) {
+  //       event.preventDefault();
 
-        var delta =
-          event.originalEvent.wheelDelta / 120 ||
-          -event.originalEvent.detail / 3;
-        var scrollTop = $window.scrollTop();
-        var finalScroll = scrollTop - parseInt(delta * scrollDistance);
+  //       var delta =
+  //         event.originalEvent.wheelDelta / 120 ||
+  //         -event.originalEvent.detail / 3;
+  //       var scrollTop = $window.scrollTop();
+  //       var finalScroll = scrollTop - parseInt(delta * scrollDistance);
 
-        TweenMax.to($window, scrollTime, {
-          scrollTo: { y: finalScroll, autoKill: true },
-          ease: Power1.easeOut, //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
-          autoKill: true,
-          overwrite: 5
-        });
-      });
-    });
-  }
+  //       TweenMax.to($window, scrollTime, {
+  //         scrollTo: { y: finalScroll, autoKill: true },
+  //         ease: Power1.easeOut, //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+  //         autoKill: true,
+  //         overwrite: 5
+  //       });
+  //     });
+  //   });
+  // }
 
   //////////
   // SLIDERS
@@ -329,31 +318,6 @@ $(document).ready(function() {
         mail: "This field is required!",
         mailConfirm: "This field is required!",
         mess: "This field is required!"
-      }
-    });
-  }
-
-  ////////////
-  // REVEAL FUNCTIONS
-  ////////////
-  function initScrollMonitor(fromPjax) {
-    $("[js-reveal]").each(function(i, el) {
-      var type = $(el).data("type") || "halflyEnterViewport";
-
-      if (type === "halflyEnterViewport") {
-        var scrollListener = throttle(function() {
-          var vScrollBottom = _window.scrollTop() + _window.height();
-          var elTop = $(el).offset().top;
-          var triggerPoint = elTop + $(el).height() / 2;
-
-          if (vScrollBottom > triggerPoint) {
-            $(el).addClass("is-animated");
-            window.removeEventListener("scroll", scrollListener, false); // clear debounce func
-          }
-        }, 100);
-
-        window.addEventListener("scroll", scrollListener, false);
-        return;
       }
     });
   }
