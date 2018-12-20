@@ -10,7 +10,7 @@ block content
   section.firstscreen
     .firstscreen__video
       video(autoplay muted loop)
-        source(src="img/earth.mp4" type="video/mp4")
+        source(src="img/bg-main.mp4" type="video/mp4")
     .container
       img(src="img/logotype.png", alt="" data-aos="fade-up")
       h1(data-aos="fade-up" data-aos-delay="100") SEI-Healthcare
@@ -256,7 +256,7 @@ block content
              br
              | China
         .pre-footer__form
-          form.js-footer-form(action="#")
+          form.js-footer-form(action="send.php" method="post")
             .input-container(data-aos="fade-up")
               input(type="text" placeholder="Name" name="name")
             .input-container(data-aos="fade-up")
@@ -269,7 +269,7 @@ block content
               input.btn(type="submit", value="Submit")
         .pre-footer__item.pre-footer__item--products(data-aos="fade-up")
           p.pre-footer__title Our Products
-          a.pre-footer__link(href="#" target="_blank") MED-SIMS.ORG
+          a.pre-footer__link(href="https://med-sims.org" target="_blank") MED-SIMS.ORG
           a.pre-footer__link(href="#" target="_blank") Kases.me
 
   // END SECTION :: pre-footer

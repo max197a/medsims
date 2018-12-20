@@ -13,20 +13,16 @@ gulp.task("copy:vendor", function() {
     .pipe(gulp.dest(config.dest.vendor));
 });
 
-// gulp.task("copy:rootfiles", function() {
-//   return gulp.src(config.src.root + "/*.*").pipe(gulp.dest(config.dest.root));
-// });
+gulp.task("copy:rootfiles", function() {
+  return gulp.src(config.src.root + "/*.php").pipe(gulp.dest(config.dest.root));
+});
 
-gulp.task("copy", [
-  // 'copy:rootfiles',
-  "copy:vendor",
-  "copy:fonts"
-]);
+gulp.task("copy", ["copy:rootfiles", "copy:vendor", "copy:fonts"]);
 
 gulp.task("copy:watch", function() {
   gulp.watch(config.src.fonts + "/**/*.{eot,ttf,svg,woff,woff2}", [
     "copy:fonts"
   ]);
   gulp.watch(config.src.vendor + "/**/*.*", ["copy:vendor"]);
-  // gulp.watch(config.src.root + "/*.*", ["copy:rootfiles"]);
+  gulp.watch(config.src.root + "/*.*", ["copy:rootfiles"]);
 });
