@@ -1,7 +1,7 @@
 <?php
 	$owner_email = "max197aa@gmail.com"; // емейл на который отправляются письма
 	$headers = "Content-type: text/html; charset=utf-8 \r\n";
-	$subject = 'Сообщение с сайта ' . $_SERVER['SERVER_NAME'];
+	$subject = 'Message from ' . $_SERVER['SERVER_NAME'];
 	$messageBody = "";
 
 	if($_POST["whatForm"] != ''){
@@ -10,15 +10,22 @@
 
 	if($_POST['name'] != ''){
 		$name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);
-		$messageBody .= '<p><strong>Имя:</strong> ' . $name . '</p>' . "\r\n";
+		$messageBody .= '<p><strong>Name:</strong> ' . $name . '</p>' . "\r\n";
 	}
-	if($_POST['phone'] != ''){
-		$phone = substr(htmlspecialchars(trim($_POST['phone'])), 0, 100);
-		$messageBody .= '<p><strong>Номер телефона:</strong> ' . $phone . '</p>' . "\r\n";
+
+	if($_POST['mail'] != ''){
+		$mail = substr(htmlspecialchars(trim($_POST['mail'])), 0, 100);
+		$messageBody .= '<p><strong>Email:</strong> ' . $mail . '</p>' . "\r\n";
 	}
-	if($_POST['theme'] != ''){
-		$theme = substr(htmlspecialchars(trim($_POST['theme'])), 0, 100);
-		$messageBody .= '<p><strong>Тема консультации:</strong> ' . $theme . '</p>' . "\r\n";
+
+	if($_POST['mailConfirm'] != ''){
+		$mailConfirm = substr(htmlspecialchars(trim($_POST['mailConfirm'])), 0, 100);
+		$messageBody .= '<p><strong>Mail Confirm:</strong> ' . $mailConfirm . '</p>' . "\r\n";
+	}
+
+	if($_POST['mess'] != ''){
+		$mess = substr(htmlspecialchars(trim($_POST['mess'])), 0, 100);
+		$messageBody .= '<p><strong>Message:</strong> ' . $mess . '</p>' . "\r\n";
 	}
 
 
@@ -32,5 +39,3 @@
 		echo $e->getMessage() ."\n";
 	}
 ?>
-
-
