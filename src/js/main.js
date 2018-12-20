@@ -277,24 +277,16 @@ $(document).ready(function() {
         .removeClass("has-error");
     };
     var validateSubmitHandler = function(form) {
-      $("[js-trigger-thanks-popup]").click();
-      initSubmit();
+      // initSubmit();
       $.ajax({
         type: "POST",
         url: $(form).attr("action"),
         data: $(form).serialize(),
-        success: function(response) {
+        success: function(data) {
           $(form).removeClass("loading");
-          var data = $.parseJSON(response);
-          if (data.status == "success") {
-            // do something I can't test
-          } else {
-            $(form)
-              .find("[data-error]")
-              .html(data.message)
-              .show();
-          }
-        }
+          location.reload();
+        },
+        error: function(data) {}
       });
     };
 
