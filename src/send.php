@@ -1,12 +1,8 @@
 <?php
-	$owner_email = "max197aa@gmail.com"; // емейл на который отправляются письма
+	$owner_email = "Joseph.isaac@sei-healthcare.com	"; // email
 	$headers = "Content-type: text/html; charset=utf-8 \r\n";
 	$subject = 'Message from ' . $_SERVER['SERVER_NAME'];
 	$messageBody = "";
-
-	if($_POST["whatForm"] != ''){
-		$messageBody .= '<p><strong>Форма:</strong> ' . $_POST["whatForm"] . '</p>' . "\r\n";
-	}
 
 	if($_POST['name'] != ''){
 		$name = substr(htmlspecialchars(trim($_POST['name'])), 0, 100);

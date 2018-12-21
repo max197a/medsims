@@ -47,7 +47,7 @@ block content
   section.who#section-board
     .who__video
       video(autoplay muted loop)
-        source(src="img/office.mp4" type="video/mp4")
+        source(src="img/bg-office.mp4" type="video/mp4")
     .container
       p.who__title(data-aos="fade-up") Who We Are
       p.who__desc(data-aos="fade-up") We are a global digital healthcare communications agency founded more than a decade ago by a team of experienced digital gurus, medical education professionals and pharmaceutical marketers. We have an overwhelming desire and passion to set a new standard of excellence in digital medical education.
@@ -88,19 +88,13 @@ block content
             li
               a.cardiology__item(href="#") Dermatology
             li
-              a.cardiology__item(href="#") Emergency Medicine
-            li
               a.cardiology__item(href="#") Endocrinology
             li
               a.cardiology__item(href="#") Gastroenterology
             li
-              a.cardiology__item(href="#") Geriatrics
-            li
               a.cardiology__item(href="#") Gynecology & Fertility
             li
               a.cardiology__item(href="#") Hepatology
-            li
-              a.cardiology__item(href="#") Immunology
             li
               a.cardiology__item(href="#") Infectious Diseases
             li
@@ -110,9 +104,9 @@ block content
             li
               a.cardiology__item(href="#") Neurology
             li
-              a.cardiology__item(href="#") Non-Malignant Hematology
-            li
               a.cardiology__item(href="#") Oncology
+            li
+              a.cardiology__item(href="#") Ophthalmology
             li
               a.cardiology__item(href="#") Pediatrics
             li
@@ -122,116 +116,194 @@ block content
             li
               a.cardiology__item(href="#") Rheumatology
             li
-              a.cardiology__item(href="#") Surgery
-            li
               a.cardiology__item(href="#") Urology
-          span.pagingInfo 1/22
+          span.pagingInfo 1/18
         .cardiology__content
-          .cardiology__slider(js-professional-info)
-            .cardiology__tab(data-aos="fade-up")
+          .cardiology__slider(js-professional-info='js-professional-info')
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Anesthesiology advisory board
               .cardiology__body
-                p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
-                p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
-                p.cardiology__info • John McMurray, The University of Glasgow, UK
-                p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
-                p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Philippe Dubois, Université catholique de Louvain, Belgium
+                p.cardiology__info • Eugene R Viscusi, Sidney Kimmel Medical college, USA
+                p.cardiology__info • Dennis Fisher, University of California San Francisco, USA
+                p.cardiology__info • Albert Dahan, Leiden University Medical Center, The Netherlands
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Cardiology advisory board
               .cardiology__body
                 p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
-                p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
-                p.cardiology__info • John McMurray, The University of Glasgow, UK
+                p.cardiology__info • Jean-Luc Vachiéry, Erasme University Hospital, Belgium
                 p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
                 p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
-                p.cardiology__info • Bryan Williams, University College London, UK
-                p.cardiology__info • Jean-Luc Vachiéry, Erasme University Hospital, Belgium
-                p.cardiology__info • Faiez Zannad, CHU and University Henri Poincaré, France
                 p.cardiology__info • Hans-Christoph Diener, University Hospital Essen, Germany
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
+                p.cardiology__info • John McMurray, The University of Glasgow, UK
+                p.cardiology__info • Faiez Zannad, CHU and University Henri Poincaré, France
+                p.cardiology__info • Bryan Williams, University College London, UK
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Dermatology advisory board
               .cardiology__body
-                p.cardiology__info • Peter Verhamme, MD, University Hospitals Leuven, Belgium
-                p.cardiology__info • Deepak L. Bhatt, Brigham and Women's Hospital, USA
-                p.cardiology__info • John McMurray, The University of Glasgow, UK
-                p.cardiology__info • Christie Mitchell Ballantyne, Baylor College of Medicine, USA
-                p.cardiology__info • Wolfgang Koenig, University of Ulm Medical Center, Germany
-            .cardiology__tab(data-aos="fade-up")
-              .cardiology__title Our Emergency Medicine advisory board
-              .cardiology__body
-                p.cardiology__info • Emergency Medicine doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Carle Paul, MD, PhD. ‎Toulouse University, France
+                p.cardiology__info • Dr Nisha Suyien Chandran, National University Hospital, Singapore
+                p.cardiology__info • Marcus Maurer, MD. Charité, Universitätsmedizin Berlin, Germany
+                p.cardiology__info
+                  | • Anthony Bewley, Whipps Cross University Hospital & the Royal London Hospital, UK
+                p.cardiology__info • Paolo Gisondi, University of Verona, Italy
+                p.cardiology__info • Jerry Bagel, Psoriasis Treatment Center of Central New Jersey, USA
+                p.cardiology__info • Paul S Yamauchi, David Geffen School of Medicine at UCLA, USA
+                p.cardiology__info • Jean Jacques Grob, Hôpital de la Timone, Marseille, France
+                p.cardiology__info • Adam Friedman, Albert Einstein College of Medicine, USA
+                p.cardiology__info • Wolf-Henning Boehncke, University of Geneva Geneva, Switzerland
+                p.cardiology__info • Luis Puig Sanz, Hospital de la Santa Creu, Spain
+                p.cardiology__info • Joel M. Gelfand, University of Pennsylvania Perelman School of Medicine, USA
+                p.cardiology__info • Jeffrey J. Crowley, Bakersfield Dermatology & Skin Cancer Medical Group, USA
+                p.cardiology__info • Kristian Reich, Georg-August-University Göttingen, Germany
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Endocrinology advisory board
               .cardiology__body
-                p.cardiology__info • Endocrinology doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Kathleen Wyne, Ohio State University Wexner Medical Center. USA
+                p.cardiology__info • Naveed Sattar, University of Glasgow, UK
+                p.cardiology__info • Paola Fioretto, University of Padova, Italy
+                p.cardiology__info • Angelo Avogaro, University of Padova. Italy
+                p.cardiology__info • Michael Nauck, Bad Lauterberg Hospital, Germany
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Gastroenterology advisory board
               .cardiology__body
-                p.cardiology__info • Gastroenterology doctor
-            .cardiology__tab(data-aos="fade-up")
-              .cardiology__title Our Geriatrics advisory board
-              .cardiology__body
-                p.cardiology__info • Geriatrics doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Stefano Fagiuoli, University of Padova, Italy
+                p.cardiology__info • Stanislas Pol, Université Paris V (Paris Descartes), France
+                p.cardiology__info • Bruce E. Sands, Mount Sinai School of Medicine, USA
+                p.cardiology__info • Silvio Danese, Humanitas Research Hospital, Milan, Italy
+                p.cardiology__info • Jean-Frederic Colombel, Mount Sinai Health System, USA
+                p.cardiology__info • Peter Irving, Guy's and St. Thomas’ Hospitals, UK
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Gynecology & Fertility advisory board
               .cardiology__body
-                p.cardiology__info • Gynecology & Fertility doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Tommaso Simoncini, Azienda Ospedaliero-Universitaria Pisana, Italy
+                p.cardiology__info • Scott M Nelson. University of Glasgow, UK
+                p.cardiology__info • Dominique De Ziegler, NYU Langone Health, USA
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Hepatology advisory board
               .cardiology__body
-                p.cardiology__info • Hepatology doctor
-            .cardiology__tab(data-aos="fade-up")
-              .cardiology__title Our Immunology advisory board
-              .cardiology__body
-                p.cardiology__info • Immunology doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Markus Peck-Radosavljevic, Medical University of Vienna, Austria
+                p.cardiology__info • Maria Buti, Hospital General Universitari Vall d´Hebron, Spain
+                p.cardiology__info • Jean-Michel Pawlotsky, Henri Mondor University Hospital, France
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Infectious Diseases advisory board
               .cardiology__body
-                p.cardiology__info • Infectious Diseases doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Anton Pozniak, Chelsea and Westminster Hospital, UK
+                p.cardiology__info • Paul Edward Sax, Brigham and Women's Hospital, USA
+                p.cardiology__info • Seng-Gee Lim, National University Hospital, Singapore
+                p.cardiology__info • Andrea Lay Hoon Kwa, Duke-NUS, Singapore
+                p.cardiology__info • Lee Cheng Chuan, Tan Tock Seng Hospital, Singapore
+                p.cardiology__info • Jürgen Rockstroh, University of Bonn, Germany
+                p.cardiology__info • Mark R Nelson, Chelsea and Westminster Hospital, UK
+                p.cardiology__info • Hsu Li Yang, Tan Tock Seng Hospital, Singapore
+                p.cardiology__info • Wong Chen Seong, Tan Tock Seng Hospital, Singapore
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Malignant Hematology advisory board
               .cardiology__body
-                p.cardiology__info • Malignant Hematology doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Giuseppe Saglio, University of Turin, Italy
+                p.cardiology__info • Michael Hallek, The University of Cologne, Germany
+                p.cardiology__info • Giuseppe Saglio, University of Turin, Italy
+                p.cardiology__info
+                  | • Pier Mannuccio Mannucci, Fondazione IRCCS Ca' Granda- Ospedale Maggiore Policlinico, Italy
+                p.cardiology__info • Robin Foà, University "Sapienza" Rome, Italy
+                p.cardiology__info • Michele Baccarani, Universita di Bologna, Italy
+                p.cardiology__info • Sagar Lonial, Emory Healthcare, USA
+                p.cardiology__info • Robert Klamroth, Vivantes Klinikum im Friedrichshain, Germany
+                p.cardiology__info • Francesco Passamonti, Università degli studi dell'Insubria, Verese, Italy
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Nephrology advisory board
               .cardiology__body
-                p.cardiology__info • Nephrology doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Gere Sunder-Plassmann, Medical University Vienna, Austria
+                p.cardiology__info • Martin K. Kuhlmann, Vivantes Friedrichshain Hospital, Berlin, Germany
+                p.cardiology__info • Sagar U. Nigwekar, Harvard Medical School, USA
+                p.cardiology__info • David C Wheeler, University College London, UK
+                p.cardiology__info • Matthew R. Weir, University of Maryland School of Medicine, USA
+                p.cardiology__info • Jay B. Wish, Indiana University Health, USA
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Neurology advisory board
               .cardiology__body
-                p.cardiology__info • Neurology doctor
-            .cardiology__tab(data-aos="fade-up")
-              .cardiology__title Our Non-Malignant Hematology advisory board
-              .cardiology__body
-                p.cardiology__info • Non-Malignant Hematology doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • David Hargroves, East Kent Hospitals University NHS Foundation Trust, UK
+                p.cardiology__info • Emilio Perucca, University of Pavia, Italy
+                p.cardiology__info • Werner Hacke, University of Heidelberg, Germany
+                p.cardiology__info • Per Soelberg Sørensen, University of Copenhagen, Denmark
+                p.cardiology__info • Martin Brodie, University of Glasgow, UK
+                p.cardiology__info • Dimos-Dimitrios D. Mitsikostas, Athens Naval Hospital, Greece
+                p.cardiology__info • Sven Schippling, University Medical Centre Zurich, Switzerland
+                p.cardiology__info • Paolo Barone, University of Salerno, Italy
+                p.cardiology__info • Peter J Goadsby, King's College London, UK
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Oncology advisory board
               .cardiology__body
-                p.cardiology__info • Oncology doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Fabrice Barlesi, Université Paul Sabatier, France
+                p.cardiology__info • Richard Finn, Geffen School of Medicine, UCLA, USA
+                p.cardiology__info • Luis Paz-Ares, Hospital Universitario Doce de Octubre, Spain
+                p.cardiology__info • Dominik P. Modest, University Hospital Grosshadern, Germany
+                p.cardiology__info • Yi-Long Wu, Guangdon Lung Cancer Institute, China
+                p.cardiology__info • Michael Green, Royal Melbourne Hospital, Australia
+                p.cardiology__info • Ian Olver, University of South Australia, Australia
+                p.cardiology__info • Marc Peeters, Antwerp University, Belgium
+                p.cardiology__info • Alexander M.M. Eggermont, Général Gustave Roussy, Université Paris-Sud, France
+                p.cardiology__info • Tan Shao Weng Daniel, National Cancer Centre, Singapore
+                p.cardiology__info • Yung-Jue Bang, Seoul National University College of Medicine, South Korea
+                p.cardiology__info • Nicolas Girard, Thorax Institute Curie, Montsouris, France
+            .cardiology__tab(data-aos='fade-up')
+              .cardiology__title Our Ophthalmology advisory board
+              .cardiology__body
+                p.cardiology__info • Fotis Topouzis, Aristotle University of Thessaloniki, Greece
+                p.cardiology__info • Keith Martin, University of Cambridge, UK
+                p.cardiology__info • Margarita Calonge, Universidad de Valladolid, Spain
+                p.cardiology__info • Giulio Bamonte, The Zonnestraal Eye Hospital, The Netherlands
+                p.cardiology__info • Marco Coassin, Arcispedale S. Maria Nuova IRCCS. Italy
+                p.cardiology__info • Ivan Goldberg, Sydney Eye Hospital, Australia
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Pediatrics advisory board
               .cardiology__body
-                p.cardiology__info • Pediatrics doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Leyla Namazova-Baranova, Scientific Centre of Children Health, Russia
+                p.cardiology__info • Daniele De Luca, South Paris University Hospitals, France
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Psychiatry advisory board
               .cardiology__body
-                p.cardiology__info • Psychiatry doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Andrea Fagiolini, University of Siena School of Medicine, Italy
+                p.cardiology__info • Dieter Naber, University Medical Center Hamburg-Eppendorf, Germany
+                p.cardiology__info • Robin Emsley, Stellenbosch University, South Africa
+                p.cardiology__info • Philip Gorwood, Paris Descartes University, France
+                p.cardiology__info • Christoph U. Correll, Hofstra Northwell School of Medicine, USA
+                p.cardiology__info • Andrew Molodynski, Oxford Health NHS Foundation Trust, UK
+                p.cardiology__info • Mark R Nelson, Chelsea and Westminster Hospital, UK
+                p.cardiology__info • Hsu Li Yang, Tan Tock Seng Hospital, Singapore
+                p.cardiology__info • Wong Chen Seong, Tan Tock Seng Hospital, Singapore
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Pulmonary & Respiratory advisory board
               .cardiology__body
-                p.cardiology__info • Pulmonary & Respiratory doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Harry Heijerman, ‎University Medical Centre Utrecht, The Netherlands
+                p.cardiology__info • Marion Delcroix, UZ Leuven, Belgium
+                p.cardiology__info • Stephan Rosenkranz, Uniklinik Köln, Germany
+                p.cardiology__info • Peter M A Calverley, University of Liverpool, UK
+                p.cardiology__info • Christian Virchow, University of Rostock, Germany
+                p.cardiology__info • Stuart Elborn, Queens University Hospital in Belfast, UK
+                p.cardiology__info • Michael E. Wechsler, National Jewish Health, USA
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Rheumatology advisory board
               .cardiology__body
-                p.cardiology__info • Rheumatology doctor
-            .cardiology__tab(data-aos="fade-up")
-              .cardiology__title Our Surgery advisory board
-              .cardiology__body
-                p.cardiology__info • Surgery doctor
-            .cardiology__tab(data-aos="fade-up")
+                p.cardiology__info • Peter Taylor, University of Oxford, UK
+                p.cardiology__info • Xenofon Baraliakos, Ruhr-University Bochum, Germany
+                p.cardiology__info • Petros Efthimiou, NYU Langone Hospitals, USA
+                p.cardiology__info • Paul Emery, Leeds Institute Rheumatic and Musculoskeletal Medicine, UK
+                p.cardiology__info • Ingrid Moller, Bellvitge University Hospital, Spain
+                p.cardiology__info
+                  | • Ronald van Vollenhoven, Amsterdam Rheumatology & Immunology Center, The Netherlands
+                p.cardiology__info • Philip J Mease, University of Washington School of Medicine, USA
+            .cardiology__tab(data-aos='fade-up')
               .cardiology__title Our Urology advisory board
               .cardiology__body
-                p.cardiology__info • Urology doctor
+                p.cardiology__info • Bernard Escudier, Institut Gustave Roussy, Villejuif, France
+                p.cardiology__info • Oliver Sartor, Tulane University School of Medicine, USA
+                p.cardiology__info
+                  | • Zev A. Wainberg, David Geffen School of Medicine at University of California, USA
+                p.cardiology__info • Neal Shore, Carolina Urologic Research Center, USA
+                p.cardiology__info • Daniel P. Petrylak, Yale School of Medicine, USA
+
   // END SECTION :: cardiology
 
   // BEGIN SECTION :: pre-footer
